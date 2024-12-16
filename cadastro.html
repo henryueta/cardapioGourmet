@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amore Mio - Crie uma conta</title>
+    <link rel="icon" href="img/logo2.png"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="fundo" id="fundo">
+
+        <form>
+            <div class="formularioUsuario">
+                <div>
+                    <p class="tituloForm"><b>CRIE SUA CONTA</b></p>
+                </div>
+                <div>
+                    <fieldset class="group">
+                        <label for="txtNome">Nome:</label>
+                        <input type="" name="nome" required placeholder="Digite seu nome completo">
+                    </fieldset>
+
+                    <fieldset class="group">
+                        <label for="emailUsuario">Email:</label>
+                        <input type="email" id="emailUsuario" required placeholder="Digite seu endereço de email">
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="group">
+                        <label for="telUsuario">Telefone:</label>
+                        <input type="tel" id="telUsuario" required placeholder="Digite seu telefone">
+                    </fieldset>
+
+                    <fieldset class="group">
+                        <label for="senhaUsuario">Senha:</label>
+                        <input type="password" id="senhaUsuario" minlength="8" required
+                            placeholder="Crie uma senha de 8 caracteres">
+                    </fieldset>
+
+                </div>
+                <div>
+
+
+
+                </div>
+                <div>
+                    <fieldset class="enviarForm">
+                        <input type="submit" value="Cadastrar">
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        $('#telUsuario').mask('(00) 00000-0000');
+    </script>
+
+
+</body>
+
+</html>

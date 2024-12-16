@@ -1,0 +1,1277 @@
+@font-face {
+    font-family: 'GOLDEN';
+    src: url(fonts/Goldbugs.ttf);
+}
+
+@font-face {
+    font-family: 'paraTudo';
+    src: url(fonts/PTSans-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+transition: ease-in 0.2s;
+font-family: 'paraTudo';
+}
+
+body{
+   
+overflow-x: hidden;
+    }
+
+
+
+.conteudo{
+    transition: 1s;
+    height: 450px;
+    width: 98.95vw;
+    display: flex;
+    background-image: url(img/fundo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+.frase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 700px;
+    width: 98.95vw;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+.frase>div{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgb(44, 28, 28);
+    background-color: rgb(101, 41, 41);
+}
+
+.frase>p{
+    text-align: center;
+margin: 7px;
+}
+
+.frase>div>img{
+    height: 100%;
+    width: 100%;
+}
+
+.nomeLogo{
+    font-size: 30px;
+}
+.funcio{
+
+    font-size: 15px;
+    width: 170px;
+    height: 25px;
+    background-color: rgb(145, 77, 45);
+    border-radius: 10px;
+}
+
+.logo{
+    font-size: 35px;
+    font-family: 'GOLDEN';
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 0px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+
+
+.menu{
+    width: 98.95vw;
+    height: 68px;
+    background-color: rgb(88, 26, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 701;
+}
+
+
+.navegar{
+    height: 60px;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 17px;
+}
+
+.navegar a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+.navegar a:hover{
+    transition: 0.1s;
+    color: rgb(126, 126, 126);
+    
+}
+
+.saida{
+    display: none;
+    cursor: pointer;
+    border: 1px solid rgb(163, 69, 69);
+    border-radius: 100%;
+    width: 38px;
+    height: 38px;
+    padding: 4px;
+    margin: 20px;
+}
+
+.exibir{
+    transform: translate(0) !important;
+    }
+
+
+
+.visibilidade{
+    display: none;
+}
+
+.usuarioOpcoes{
+    position: fixed;
+    right:0;
+    top: 65px;
+    display: flex;
+    height: 150px;
+    width: 105px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(51, 8, 8);
+    transform: translate(100%);
+    color: rgb(0, 0, 0);
+    z-index: 701;
+}
+
+.usuarioOpcoes>div{
+    display: flex;
+    height: 130px;
+    width: 100px;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px black;
+}
+
+.usuarioOpcoes>div>div{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(197, 197, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.usuarioOpcoes>div>div:hover{
+    background-color: rgb(0, 0, 0,0.1);
+
+}
+
+.usuarioOpcoes a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.lateral{
+    height: 60px;
+    width: 26.9vw;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+
+.lateral img{
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    padding: 3px;
+}
+
+.lateral>div{
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid rgb(163, 69, 69);
+    
+}
+
+.lateral>div:hover{
+    border: 1px solid rgb(87, 33, 33);
+}
+
+.lateral img:hover{
+    opacity: 80%;
+}
+
+
+
+#notification{
+    visibility: hidden;
+    position: absolute;
+   border-radius: 100%;
+   top: 12px;  
+   right: 13px;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(192, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+
+
+.usuarioSacola{
+    border-radius: 100%;
+    padding: 2px;
+}
+
+.usuarioAcesso{
+    border-radius: 100%;
+flex-direction: column;
+justify-content: space-evenly;
+cursor: pointer;
+}
+
+.usuarioAcesso>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.linha1{
+    background-color: rgb(255, 255, 255);
+height: 2px;
+width: 30px;
+    transform: translatey(1px) rotate(405deg);
+    }
+
+    .linha2{
+        transform: translatey(-1px) rotate(-405deg);
+        background-color: rgb(255, 255, 255);
+height: 2px;
+width: 30px;
+        }
+
+.lateral>img:hover{
+    opacity: 80%;
+}
+
+.tudo{
+    display: flex;
+    height: 100%;
+    width: 98.95vw;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    Background: linear-gradient(180deg, rgb(240, 224, 214) 0%, rgb(238, 204, 204) 10%);
+}
+
+.destaque{
+   margin: 15px;
+   font-size: 25px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: rgb(134, 17, 23);
+}
+
+
+
+
+.tipoEscolha{
+    align-items: center;
+     /* Background: linear-gradient(180deg, rgb(240, 214, 214) 20%, rgb(92, 38, 38) 10%, rgb(255, 255, 255,0.0) 20%);  */
+    width: 1150px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: start;
+    position: sticky;
+    z-index: 701;
+    top: 4px;
+    background-color: rgb(88, 26, 26);
+
+    
+}
+
+.tipoEscolha div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+    width: 230px; 
+font-size: 20px;
+color: white;
+
+border-right: 2px solid black;
+border-radius:5px;
+}
+
+
+.tipoEscolha p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0px 0px 20px black;
+    
+}
+
+.tipoEscolha a{
+    text-decoration: none;
+}
+
+.tipo{
+    align-items: center;
+     /* Background: linear-gradient(180deg, rgb(240, 214, 214) 20%, rgb(92, 38, 38) 10%, rgb(255, 255, 255,0.0) 20%);  */
+    width: 96vw;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+}
+
+.tipo div{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    width: 230px; 
+font-size: 20px;
+color: white;
+text-shadow: 0px 0px 0px black;
+
+}
+
+
+
+.tipo img{
+    height: 100%;
+width: 230px; 
+    border-radius: 5px;
+    
+}
+
+.tipo p{
+    position: absolute;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0,0.5) 100%);
+height: 130px;
+width: 230px; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.tipo p:hover{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0,0.4) 100%);
+}
+
+.final{
+    background-color: rgb(88, 26, 26);   
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-evenly;
+    justify-content: end;
+}
+
+.logoFinal{
+    background-color: rgb(87, 27, 27);   
+    width: 98.95vw;
+    height: 200px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-evenly;
+    justify-content: start;
+}
+
+
+
+.infoFinal{
+    background-color: rgb(53, 21, 13);   
+    width: 98.95vw;
+    height: 400px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-evenly;
+    
+}
+
+.infoFinal>div{
+    height: 100%;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    text-align: start;
+}
+
+
+
+.infoFinal>div>div{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: start;
+
+width: 100%;
+
+}
+
+.infoFinal>a>img{
+    height: 200px;
+    width: 200px;
+}
+
+.infoFinal>div>img{
+   height: 70px;
+   width: 200px;
+}
+
+.infoFinal>div>div>img{
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+
+.final h1{
+    font-size: 30px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.final hr{
+    width: 80%;
+}
+
+.final p{
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.final p:hover{
+    opacity: 80%;
+}
+
+
+/* ----------------CARDÁPIO-----------------------------------------------------------------------------------------------------------------------*/
+
+.quadrado{
+    height: 600px;
+    width: 96vw;
+    background-color: rgb(88, 26, 26);
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.quadrado>p{
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+}
+
+.quadrado2{
+    height: 870px;
+    width: 96vw;
+    background-color: rgb(71, 10, 10);
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.quadrado2>p{
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+}
+
+.quadrado3{
+    height: 700px;
+    width: 96vw;
+    background-color: rgb(71, 10, 10);
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.quadrado3>p{
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+}
+
+/* .destacados{  
+    border-radius: 15px;
+    width: 1200px;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: rgb(145, 77, 45);
+}*/
+
+.lista1{
+    height: 580px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    background-color: white;
+    border-end-start-radius: 15px;
+    border-end-end-radius: 15px;
+}
+
+.lista1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.lista2{
+    height: 870px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    background-color: white;
+    border-end-start-radius: 15px;
+    border-end-end-radius: 15px;
+}
+
+.lista2 a{
+    text-decoration: none;
+    color: black;
+}
+
+.lista3{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    background-color: white;
+    border-end-start-radius: 15px;
+    border-end-end-radius: 15px;
+}
+
+.lista3 a{
+    text-decoration: none;
+    color: black;
+}
+
+.comida{
+    cursor: pointer;
+    height: 240px;
+    width: 570px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#semComida{
+    height: 240px;
+    width: 42vw;
+    opacity: 0%;
+}
+
+.comida:hover{
+background-color: rgb(218, 218, 218);
+opacity: 80%;
+
+}
+
+.comida>div{
+    
+    width: 320px;
+    display: flex;
+    justify-content: start;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-direction: column;
+    padding: 10px;
+    text-align: start;
+    
+}
+
+
+
+.comida>div>img{
+    
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comida>div>div{
+    height: 70px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nomeProduto{
+    color: black;
+    font-size: 20px;
+}
+
+.detalhes{
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+
+.preparo{
+    padding: 5px;
+    color: white;
+    width: 120px;
+    height: 27px;
+    background-color: brown;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.semPreparo{
+    padding: 5px;
+    color: rgb(255, 0, 0);
+    width: 120px;
+    height: 27px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid red;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+
+
+
+
+
+/*------PEDIDO---------------------------------------------------------------------------------- */
+
+.menu2{
+    
+    width: 98.95vw;
+    height: 68px;
+    background-color: rgba(49, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 701;
+}
+
+#intangivel{
+    transition: 1s;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0,0.4);
+    backdrop-filter: blur(3px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 701;
+}
+
+#avisoLogin{
+    position: absolute;
+    height: 65vh;
+    width: 60vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: row;
+    
+}
+
+.infoLogin{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.tituloPop{
+    font-size: 30px;
+
+color: rgb(121, 70, 49);
+}
+
+.infoPop{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+#avisoLogin button{
+    cursor: pointer;
+    background-color: rgb(134, 17, 23);
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(58, 15, 15);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#avisoLogin button:hover{
+    opacity: 80%;
+}
+
+#avisoLogin a{
+    text-decoration: none;
+
+}
+
+.imagemLogin{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 10px;
+    background-image: url(img/mesaCasal.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.imagemLogin>div{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(73, 18, 18);
+}
+
+
+.tudoP3{
+    display: flex;
+    height: 1400px;
+    width: 98.95vw;
+    align-items: center;
+    flex-direction: column;
+    Background: linear-gradient(180deg, rgb(240, 224, 214) 0%, rgb(255, 230, 230) 10%);
+}
+
+
+.tudoProduto{
+    margin: 40px;
+    Background: linear-gradient(180deg,rgb(106, 13, 18)5%,rgb(255, 255, 255)50%, rgb(255, 255, 255) 45%);
+    border: 3px solid rgb(192, 192, 192);
+    border-radius: 15px;
+    height: 1200px;
+    width: 96vw;
+    display: flex;
+    justify-content: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto{
+    border-radius: 15px;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+}
+
+.sugestoes{
+    border-top: 2px solid rgb(114, 114, 114);
+    width: auto;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.sugestoes>p{
+    color: rgb(134, 17, 23);
+    font-size: 20px;
+    margin: 10px;
+}
+
+.produto>div>p{
+    color: rgb(0, 0, 0);
+    text-align: start;
+}
+
+.listaReco{
+    height: 550px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap; 
+}
+
+.listaReco>a{
+    text-decoration: none;
+    color: black;
+}
+
+.veja{
+    width: auto;
+    height: 550px;
+    width: 96vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+
+.galeriaComida{
+    display: flex;
+    flex-direction: column;
+    height: 530px;
+    width: 600px;
+}
+
+#fotosComida{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+#fotosComida>div{
+    height: 130px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#fotosComida>div>img:hover{
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 80%;
+}
+
+#fotosComida>div>img{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(155, 155, 155);
+    object-fit: cover;
+    
+}
+
+.imagemComida{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid rgb(155, 155, 155);
+
+}
+
+.imagemComida>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#imagemGrande:hover{
+transform: scale(1.2);
+}
+
+.pedidoComida{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.paraCompra{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 105px;
+}
+
+.nomeComida{
+    font-size: 25px;
+    }
+    
+
+.categoria{
+    border:1px solid red;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+.categoria>*{
+    margin: 5px;
+}
+
+.aparecer{
+    visibility: visible;
+    
+}
+.opcoesCompra{
+
+display: flex;
+flex-direction: row;
+justify-content: left;
+
+align-items: start;
+width: 420px;
+height: 40px;
+
+}  
+
+.opcoesCompra>button{
+    cursor: pointer;
+    background-color: rgb(134, 17, 23);
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(58, 15, 15);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcoesCompra>button>img{
+    display: none;
+    margin: 5px;
+    height: 25px;
+    width: 25px;
+}
+
+.opcoesCompra>button:hover{
+    opacity: 80%;
+}
+
+.comprar:hover{
+    opacity: 80%;
+}
+
+
+
+/*----FORMULÀRIO----------------------------------------------------------------------------------------------*/
+
+.group{
+    height: 100px;
+    width: 360px;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 25px;
+    flex-direction: column;
+
+}
+
+.group>label{
+    text-align: start;
+}
+
+.group>input{
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(145, 77, 45);
+    outline: none;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    
+}
+
+.group>input:hover{
+    background-color: rgb(0, 0, 0,0.05);
+}
+
+.enviarForm{
+    height: 140px;
+    width: 440px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    flex-direction: column;
+}
+.enviarForm>input{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 360px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgb(170, 105, 74);
+    color: white;
+    border-radius: 10px;
+}
+
+.enviarForm>input:hover{
+    opacity: 80%;
+}
+
+.enviarForm a{
+    color: rgb(255, 98, 0);
+}
+
+.fundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(88, 26, 26);
+}
+
+.formularioUsuario{
+    display: flex;
+    height: 90vh;
+    width: 48vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    border: 3px solid rgb(148, 109, 109);
+}
+
+.formularioUsuario>div{
+    height: 90vh;
+    width: 48vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tituloForm{
+    color: rgb(145, 77, 45);
+    font-size: 30px;
+
+}
+
+/*-------CARRINHO--------------------------------------------------------*/
+
+.tudoP4{
+    display: flex;
+    height: 1500px;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(88, 26, 26);
+    padding: 15px;
+}
+
+.invisivelBarra{
+    width: 98.95vw;
+    height: 15vh;
+}
+
+.tudoCompra{
+    background-color: white;
+    height: 100vh;
+    width: 95vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 15px;
+}
+
+.tudoCompra>div{
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.itensCompra{
+    
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.listaCompra{
+    border-right: 1px solid black;
+    width: 60vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.listaCompra>div{
+    margin: 25px;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 100vh;
+    height: 20vh;
+}
+
+.tituloCompra{
+    height: 8vw;
+    width: 60vw;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    color: rgb(145, 77, 45);
+}
+
+
+.totalCompra{
+    width: 40vw;
+    height: 90vh;
+    border: 1px solid red;
+   
+}

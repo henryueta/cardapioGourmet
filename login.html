@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amore Mio - Faça seu Login</title>
+    <link rel="icon" href="img/logo2.png"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="fundo" id="fundo">
+
+        <form>
+            <div class="formularioUsuario">
+                <div>
+                    <p class="tituloForm"><b>FAZER LOGIN</b></p>
+                </div>
+                <div>
+                    <fieldset class="group">
+                        <label for="txtNome">Nome:</label>
+                        <input type="" name="nome" required placeholder="Digite seu nome">
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="group">
+                        <label for="emailUsuario">Email:</label>
+                        <input type="email" id="emailUsuario" required placeholder="Digite seu email">
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="group">
+                        <label for="senhaUsuario">Senha:</label>
+                        <input type="password" id="senhaUsuario" minlength="8" required placeholder="Digite sua senha">
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="enviarForm">
+                        <p>Não possui uma conta?<a href="cadastro.html">Crie agora!</p></a>
+                        <input type="submit" value="Entrar">
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        $('#telUsuario').mask('(00) 00000-0000');
+    </script>
+
+
+</body>
+
+</html>
